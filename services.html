@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | PrimeConsult</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 导航栏（与首页完全一致） -->
+        <nav x-data="{ mobileOpen: false }" class="bg-white shadow-md rounded-2xl mt-4 py-3 px-4 md:px-6">
+            <div class="flex justify-between items-center">
+                <a href="professional_site.html" class="text-2xl font-bold text-slate-800 tracking-tight">PrimeConsult</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="professional_site.html" class="text-slate-600 hover:text-indigo-600 transition">Home</a>
+                    <a href="services.html" class="text-slate-600 hover:text-indigo-600 transition">Services</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-indigo-600 transition">Contact</a>
+                </div>
+                <button @click="mobileOpen = !mobileOpen" class="md:hidden text-slate-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div x-show="mobileOpen" x-cloak class="md:hidden mt-3 pt-2 pb-1 space-y-2">
+                <a href="professional_site.html" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-indigo-50">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-indigo-50">Services</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-indigo-50">Contact</a>
+            </div>
+        </nav>
+
+        <!-- 服务列表（响应式卡片） -->
+        <div class="my-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800">What We Deliver</h1>
+            <p class="text-center text-slate-500 max-w-2xl mx-auto mt-2 mb-10">Expert solutions tailored to your industry</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow p-6 flex items-start gap-4">
+                    <span class="text-3xl">📋</span>
+                    <div><h3 class="font-bold text-xl">Audit & Compliance</h3><p class="text-slate-600 mt-1">Ensure regulatory readiness with our audit experts.</p></div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 flex items-start gap-4">
+                    <span class="text-3xl">🌐</span>
+                    <div><h3 class="font-bold text-xl">Digital Transformation</h3><p class="text-slate-600 mt-1">Modernize workflows and adopt emerging tech.</p></div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 flex items-start gap-4">
+                    <span class="text-3xl">📢</span>
+                    <div><h3 class="font-bold text-xl">Brand Strategy</h3><p class="text-slate-600 mt-1">Build a memorable identity that resonates.</p></div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 flex items-start gap-4">
+                    <span class="text-3xl">🤝</span>
+                    <div><h3 class="font-bold text-xl">Interim Management</h3><p class="text-slate-600 mt-1">Seasoned leaders to drive change and results.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="border-t border-gray-200 py-6 text-center text-slate-500 text-sm mt-8">
+            &copy; 2026 PrimeConsult. All rights reserved.
+        </footer>
+    </div>
+    <style>[x-cloak] { display: none !important; }</style>
+</body>
+</html>

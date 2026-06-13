@@ -1,0 +1,19 @@
+/* 自定义样式：至少三条规则满足作业要求 */
+body {
+    background: linear-gradient(135deg, #f9fafb 0%, #eef2ff 100%);
+}
+/* 卡片圆角增强 */
+.rounded-2xl {
+    border-radius: 1.25rem;
+}
+/* 按钮悬停微效果 */
+.bg-indigo-600 {
+    transition: all 0.2s ease;
+}
+.bg-indigo-600:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+html {
+    overflow-y: scroll;
+}
